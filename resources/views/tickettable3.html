@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+        <!-- DataTables CSS -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    
+        <!-- DataTables JS -->
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        
+    
+    </head>
+
+    <body>
+    
+
+    <div class="tabl">
+
+        <h2>View Tickets</h2>
+
+    <table id="myTable" class="table table-bordered table-striped ">
+        <thead>
+            <tr class="info">
+                <th data-sortable="true">ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Username</th>
+                <th>Added</th>
+                <th>Assigned To</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Comment</th>
+                <th>Completed</th>
+                <th>Edit</th>
+                <th>Delete</th>
+
+            </tr>
+
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th><input type="text" id="InputUser" placeholder="Username"></th>
+                <th></th>
+                <th></th>
+                <th><select  id="priority" >
+                        <option value="All">All</option> 
+                        <option value="Medium">Medium</option>    
+                        <option value="High">High</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </th>
+                <th><select  id="status" >
+                        <option value="All">All</option>  
+                        <option value="Incomplete">Incomplete</option>    
+                        <option value="Complete">Complete</option>
+                    </select>
+                </th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+                
+        </tbody>         
+    </table>
+   
+        <script>
+            $(document).ready(function(){
+
+                $('#myTable').DataTable({
+                    "searching": false
+                });
+
+            });
+        </script>
+
+    </div>
+
+        <script src="js/tickettable3.js"></script>
+        <script src="js/ticketview.js"></script>
+    </body>
+</html>
